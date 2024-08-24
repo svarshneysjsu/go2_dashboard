@@ -8,6 +8,7 @@ from pydub import AudioSegment
 import base64
 import time
 import uuid
+import os
 
 CHUNK_SIZE = 61440
 

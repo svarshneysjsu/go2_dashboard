@@ -1,4 +1,15 @@
 *venv*
 .env
 .vscode
-
+*/__pycache__/*
+*.pyc
+sounds/Sparky_Intro.wav
+sounds/audio_response.wav
+sounds/audio_response_bkup.wav
+sounds/temp_audio.mp3
+unitree_sdk2py/__pycache__/__init__.cpython-312.pyc
+unitree_sdk2py/idl/__pycache__/__init__.cpython-312.pyc
+unitree_sdk2py/idl/builtin_interfaces/__pycache__/__init__.cpython-312.pyc
+unitree_sdk2py/idl/builtin_interfaces/msg/__pycache__/__init__.cpython-312.pyc
+unitree_sdk2py/idl/builtin_interfaces/msg/dds_/__pycache__/_Time_.cpython-312.pyc
+unitree_sdk2py/idl/builtin_interfaces/msg/dds_/__pycache__/__init__.cpython-312.pyc

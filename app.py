@@ -23,9 +23,11 @@ from werkzeug.utils import secure_filename
 
 from pydub import AudioSegment
 
+
 app = Flask(__name__, static_folder="static")
 app.secret_key = os.getenv("FLASK_SECRET_KEY")
 app.config['UPLOAD_FOLDER'] = 'sounds'
+app.config['UPLOAD_FOLDER_IMAGES'] = 'captured_images'
 app.config['ALLOWED_EXTENSIONS'] = {'mp3', 'wav', 'ogg', 'aac', 'flac'}
 
 script_process = {'process': None, 'name': None}
@@ -56,7 +58,7 @@ setup_logging(verbose=True)
 
 sdk = create_standard_sdk('UnitreeGo2SDK')
 communicator = DDSChannelFactoryInitialize(domainId=0)
-robot = sdk.create_robot(communicator, serialNumber='B42D2000XXXXXXXX')
+robot = sdk.create_robot(communicator, serialNumber='B42D4000O3M7MN8W')
 
 low_state_sub = communicator.ChannelSubscriber("rt/lowstate", LowState_)
 low_state_sub.Init(LowStateHandler, 10)
@@ -274,5 +276,7 @@ def change_volume(volume_lvl):
 
 	return redirect(url_for('dashboard'))
 
+
+
 if __name__ == '__main__':
-	app.run(host="0.0.0.0", port=5000, debug=True, threaded=True)
+	app.run(host="127.0.0.1", port=5000, debug=True, threaded=True)

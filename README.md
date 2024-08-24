@@ -1,7 +1,5 @@
 # Go2 Dashboard
 
-![](images/dashboard.png)
-
 A nice little dashboard to access your Unitree Go2 through a web interface that allows you to:
 - See stats about the dog like velocity or yaw speed
 - Get a live camera feed
